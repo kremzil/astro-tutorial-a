@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 import '../styles/global.css';
 const pageTitle = "Обо мне";
 
@@ -40,9 +43,7 @@ const textCase = "uppercase"
         </style>
 	</head>
 	<body>
-        <a href="/">Главная</a>
-        <a href="/about">Обо мне</a>
-        <a href="/blog">Блог</a>
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>... и моем новом сайте на Astro!</h2>
 
@@ -69,5 +70,8 @@ const textCase = "uppercase"
         {finished && <p>Я завершил(а) это руководство!</p>}
 
         {goal === 3 ? <p>Моя цель — завершить за 3 дня.</p> : <p>Моя цель — не 3 дня.</p>}
+        <Footer />
+		<script>import "../scripts/menu.js";</script>
+
 	</body>
 </html>
